@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function candidates() {
-    find "$PREFIX" -name '*.gpg' | sed -e "s:$PREFIX/::gi" -e 's:.gpg$::gi'
+    find "$PASSWORD_STORE_DIR" -name '*.gpg' | sed -e "s:$PASSWORD_STORE_DIR/::gi" -e 's:.gpg$::gi'
 }
 
 function candidate_selector_fzf() {
